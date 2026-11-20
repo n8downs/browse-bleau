@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse Bleau</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <h1>Browse&nbsp;Bleau</h1>
+    <label>Sector
+      <select id="area"></select>
+    </label>
+    <label>From
+      <select id="gmin"></select>
+    </label>
+    <label>To
+      <select id="gmax"></select>
+    </label>
+    <span id="count" class="muted"></span>
+  </header>
+
+  <main class="layout">
+    <section class="stage">
+      <div class="player" id="player"></div>
+
+      <div class="video-nav" id="video-nav">
+        <button id="vprev" title="Previous video (↑)">‹</button>
+        <span id="vlabel"></span>
+        <button id="vnext" title="Next video (↓)">›</button>
+      </div>
+
+      <div class="info" id="info"></div>
+
+      <nav class="boulder-nav">
+        <button id="prev" title="Previous boulder (←)">← Prev</button>
+        <span id="pos"></span>
+        <button id="next" title="Next boulder (→)">Next →</button>
+      </nav>
+    </section>
+
+    <aside class="list">
+      <h2>Ranked by ascents</h2>
+      <ol id="list"></ol>
+    </aside>
+  </main>
+
+  <footer class="muted">
+    Data and videos via <a href="https://bleau.info" target="_blank" rel="noopener">bleau.info</a>.
+    Keys: ←/→ boulder, ↑/↓ video.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
